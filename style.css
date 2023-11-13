@@ -1,0 +1,124 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    transition: all 0.6s ;
+}body{
+    height: 100vh;
+    width: 100vw;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+}
+.button{
+    border-radius: 20px;
+    border: 1px solid #ff4828;
+    background-color: #ff4828;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 12px 45px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: transform 80ms ease-in;
+    width: 50%;
+}
+.button:active{
+    transform: scale(0.95);
+}
+.button:focus{
+    outline: none;
+}
+.button.ghost{
+    background-color: transparent;
+    border-color: #ffffff;
+}
+input{
+    background-color:#eee;
+    border: none;
+    padding: 12px 15px;
+    margin:4px 0;
+    width: 90%;
+}
+.container{
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    position: relative;
+    overflow: hidden;
+    width: 70%;
+    max-width: 100%;
+    min-height: 480px;
+    height: 90%;
+    display: flex;
+}
+.form-container{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    overflow: hidden;
+    transform: translateX(0);
+}
+.form-container.active{
+    transform: translate(100%);
+}
+.form-container.active>div{
+    transform: translate(-100%);
+}
+.form-container form{
+    height: 80%;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.social img{
+    height: 30px;
+}
+.social-container{
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.signupbox,.loginbox{
+    min-width: 100%;
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left: 00%;
+}
+.glider{
+    width: 50%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    background-image: linear-gradient(90deg, #ff4828,#FF4069);
+    overflow: hidden;
+    z-index: 1;
+}
+.glider.active{
+    transform: translateX(-100%);
+}
+.glider.active div{
+    transform: translateX(-60%);
+}
+.signup-glider, .login-glider{
+    position: relative;
+    height: 100%;
+    min-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.signup-glider div, .login-glider div{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+}
